@@ -22,12 +22,13 @@ Bienvenue ! Vous trouverez ici le Projet 7 du parcours<a href="https://openclass
 
 Vous venez de rejoindre **AlgoInvest&Trade**, une société financière spécialisée dans l'investissement. La société cherche à optimiser ses stratégies d'investissement à l'aide d'algorithmes, afin de dégager davantage de bénéfices pour ses clients.
 
+<div align="center">
+  <a href="" target="_blank" rel="noreferrer">
+    <img src="[https://www.python.org/static/community_logos/python-logo-master-v3-TM.png](https://user.oc-static.com/upload/2020/09/18/1600429119334_P6.png)">
+  </a>
+</div>
 
-<p align="center">
 
-<a href="" class="oc-imageLink oc-imageLink--disabled"><img src="https://user.oc-static.com/upload/2020/09/18/1600429119334_P6.png" alt="Logo du club d'échecs"></a>
-
-</p>
 Vous avez passé vos premiers jours à rencontrer votre petite équipe de six personnes. Votre responsable technique, Robin, a expliqué que même si tous les membres de l'équipe connaissent les termes techniques, ils sont en revanche tous issus de l'économie et de la finance, plutôt que de l'informatique. Comme vous êtes un des seuls développeurs, votre rôle sera principalement de traduire leurs besoins commerciaux en solutions techniques.
 
 </br>
