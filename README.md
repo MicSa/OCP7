@@ -24,7 +24,7 @@ Vous venez de rejoindre **AlgoInvest&Trade**, une société financière spécial
 
 <div align="center">
   <a href="" target="_blank" rel="noreferrer">
-    <img src="[https://www.python.org/static/community_logos/python-logo-master-v3-TM.png](https://user.oc-static.com/upload/2020/09/18/1600429119334_P6.png)">
+    <img src="https://user.oc-static.com/upload/2020/09/18/1600429119334_P6.png">
   </a>
 </div>
 
