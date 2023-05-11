@@ -13,13 +13,12 @@ Bienvenue ! Vous trouverez ici le Projet 7 du parcours<a href="https://openclass
 
 <h2 align="center">
 
-# # Résolvez des problèmes en utilisant des algorithmes en Python 💻 !
+Résolvez des problèmes en utilisant des algorithmes en Python 💻 !
 
 </h2>
-```
+
 > Scénario 
 ##  
-```
 
 Vous venez de rejoindre **AlgoInvest&Trade**, une société financière spécialisée dans l'investissement. La société cherche à optimiser ses stratégies d'investissement à l'aide d'algorithmes, afin de dégager davantage de bénéfices pour ses clients.
 
