@@ -2,10 +2,10 @@
 
 def read_data(file_path):
     """
-    This function reads the data from the csv file.
-    :param file_path: The path to the csv file.
-    :return: A list of tuples representing the shares.
-    Each tuple contains the name of the share, its cost and its profit.
+    Cette fonction lit les données du fichier csv.
+    :param file_path: Le chemin vers le fichier csv.
+    :return: Une liste de tuples représentant les actions.
+    Chaque tuple contient le nom de l'action, son coût et son profit.
     """
     with open(file_path, 'r') as file:
         data = list(csv.reader(file))
@@ -16,30 +16,30 @@ def read_data(file_path):
 
 def knapsack(shares, max_cost):
     """
-    This function implements the Knapsack algorithm to find the best combination of shares.
-    :param shares: A list of tuples representing the shares.
-    :param max_cost: The maximum cost that can be spent on shares.
-    :return: The best combination of shares and the maximum profit.
+    Cette fonction met en œuvre l'algorithme du sac à dos pour trouver la meilleure combinaison d'actions.
+    :param shares: Une liste de tuples représentant les actions.
+    :param max_cost: Le coût maximum qui peut être dépensé pour les actions.
+    :return: La meilleure combinaison d'actions et le profit maximum.
     """
     num_shares = len(shares)
-    # Initializing the dynamic programming table.
+    # Initialisation du tableau de programmation dynamique.
     dp = [[0] * (max_cost + 1) for _ in range(num_shares + 1)]
 
-    # Filling the dynamic programming table.
+    # Remplissage du tableau de programmation dynamique.
     for i in range(1, num_shares + 1):
         share_name, share_cost, share_profit = shares[i - 1]
         for j in range(max_cost + 1):
             if j < share_cost:
                 dp[i][j] = dp[i - 1][j]
             else:
-                # Choosing the maximum profit between not buying the current share and buying it.
+                # Choix du profit maximum entre ne pas acheter l'action actuelle et l'acheter.
                 dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - share_cost] + share_cost * share_profit)
 
-    # The maximum profit is in the bottom-right corner of the table.
+    # Le profit maximum se trouve dans le coin inférieur droit du tableau.
     best_profit = dp[-1][-1]
     best_combination = []
 
-    # Tracing back the best combination of shares.
+    # Recherche de la meilleure combinaison d'actions.
     i, j = num_shares, max_cost
     while i > 0 and j > 0:
         share_name, share_cost, share_profit = shares[i - 1]
@@ -52,7 +52,7 @@ def knapsack(shares, max_cost):
 
 def main():
     """
-    This is the main function. It reads the data, calls the Knapsack function and prints the results.
+    C'est la fonction principale. Elle lit les données, appelle la fonction Knapsack et affiche les résultats.
     """
     shares = read_data("Actions1.csv")
     max_cost = 500
