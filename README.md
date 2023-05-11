@@ -45,11 +45,11 @@ Contraintes  :
     
 -   Dépenser au maximum 500 euros par client.
 
-<kbd>Livrables attendus 🔭 </kbd>
+
 
 > Livrables attendus 🔭
 
-> ##   
+##   
 
 Partie 1: Concevoir un premier algorithme
 -   développer une solution de force brute ("bruteforce.py").
