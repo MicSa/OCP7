@@ -1,8 +1,9 @@
-<p align="center">
+<div align="center">
+  <a href="" target="_blank" rel="noreferrer">
+    <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png">
+  </a>
+</div>
 
-<a href="" target="_blank" rel="noreferrer"><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"></a>
-
-</p>
 
 <h3 align="center">
 
