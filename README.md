@@ -94,6 +94,7 @@ Partie 3: backtesting et optimisation
 │   ├── optimised.py
 └── Partie 3
     ├── Rapport et présentation
+    ├── Datasets en CSV pour backtesting
 
 ```
 
