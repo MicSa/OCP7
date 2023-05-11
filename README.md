@@ -45,7 +45,10 @@ Contraintes  :
     
 -   Dépenser au maximum 500 euros par client.
 
-> [!Livrables attendus 🔭 ] 
+<kbd>Livrables attendus 🔭 </kbd>
+
+> Livrables attendus 🔭
+
 > ##   
 
 Partie 1: Concevoir un premier algorithme
