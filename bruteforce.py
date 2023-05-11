@@ -52,7 +52,7 @@ def main():
     Cette fonction est le point d'entrée du programme. Elle lit les données, trouve la meilleure combinaison d'actions 
     et affiche les résultats.
     """
-    shares = read_data("data.csv") # lire les données
+    shares = read_data("Actions1.csv") # lire les données
     max_cost = 500 # définir le coût maximal
     best_combination, best_profit = brute_force(shares, max_cost) # trouver la meilleure combinaison d'actions
 
