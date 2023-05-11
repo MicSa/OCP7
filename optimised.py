@@ -37,7 +37,7 @@ def knapsack(shares, max_cost):
             if dp[i][j] != dp[i - 1][j]:
                 share_name, share_cost, share_profit = shares[i - 1]
                 if dp[i][j] != dp[i - 1][j]:
-                    best_combination.append(share_name,share_cost,share_profit))
+                    best_combination.append(share_name,share_cost,share_profit)
                     j-= share_cost
                 i-=1
             
