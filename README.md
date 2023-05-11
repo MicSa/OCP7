@@ -16,9 +16,10 @@ Bienvenue ! Vous trouverez ici le Projet 7 du parcours<a href="https://openclass
 # # Résolvez des problèmes en utilisant des algorithmes en Python 💻 !
 
 </h2>
-
-> [!Scénario] 
-> ###  
+```
+> Scénario 
+##  
+```
 
 Vous venez de rejoindre **AlgoInvest&Trade**, une société financière spécialisée dans l'investissement. La société cherche à optimiser ses stratégies d'investissement à l'aide d'algorithmes, afin de dégager davantage de bénéfices pour ses clients.
 
@@ -37,19 +38,15 @@ Vous avez passé vos premiers jours à rencontrer votre petite équipe de six pe
 -  le programme essaie toutes les différentes combinaisons d'actions qui correspondent à nos contraintes, et choisit le meilleur résultat.  
 - Le programme doit donc lire un fichier contenant des informations sur les actions, explorer toutes les combinaisons possibles et afficher le meilleur investissement.
 
-Contraintes  :
+> Contraintes  :
+##
 
 -   Chaque action ne peut être achetée qu'une seule fois.
     
 -   Ne pas acheter une fraction d'action.
     
 -   Dépenser au maximum 500 euros par client.
-
-
-
-> Livrables attendus 🔭
-
-##   
+ 
 
 Partie 1: Concevoir un premier algorithme
 -   développer une solution de force brute ("bruteforce.py").
@@ -67,8 +64,8 @@ Partie 3: backtesting et optimisation
 -   Préparer un jeu de diapositives contenant une comparaison côte à côte entre les résultats de votre algorithme et les choix de Sienna  
 - Créer un rapport d'exploration de l'ensemble des données. Présentation.
 
-> [!Livrables attendus 🔭 ] 
-> ##   
+> Livrables attendus 🔭  
+##   
 
 1.  Un **fichier Python `bruteforce.py`** avec la solution de force brute. 
 2.  Un **fichier Python `optimized.py`** avec la version optimisée de l'algorithme.
@@ -82,8 +79,11 @@ Partie 3: backtesting et optimisation
 
 </br>
 
-> [!note] 
+> note
+##
+
 > Structure de dossiers du projet  
+##
 
 ```
 ├── Partie 1
