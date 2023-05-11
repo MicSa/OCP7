@@ -1,6 +1,6 @@
 <p align="center">
 
-<a href="" target="_blank" rel="noreferrer"><img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fwww.python.org%2Fstatic%2Fcommunity_logos%2Fpython-logo-master-v3-TM.png&sp=1678450408T4e2eae9177a1d48c962869bcfa7ae8c5f16b84722f382e576e60601b8ecd2605"></a>
+<a href="" target="_blank" rel="noreferrer"><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"></a>
 
 </p>
 
