@@ -36,7 +36,7 @@ def brute_force(shares, max_cost):
 
 #Fonction Main
 def main():
-    shares = read_data("data.csv")
+    shares = read_data("Actions1.csv")
     max_cost = 500
     best_combination, best_profit = brute_force(shares, max_cost)
     
