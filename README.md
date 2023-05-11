@@ -45,23 +45,29 @@ Vous avez passé vos premiers jours à rencontrer votre petite équipe de six pe
 -   Ne pas acheter une fraction d'action.
     
 -   Dépenser au maximum 500 euros par client.
- 
+
+##
 
 Partie 1: Concevoir un premier algorithme
 -   développer une solution de force brute ("bruteforce.py").
 
+##
+
 Partie 2: Optimisation d'algorithme
 -    Le programme Python optimisé, qui lit un fichier contenant des informations sur les actions, et fournit la meilleure stratégie d'investissement.
 -   Un jeu de diapositives contenant les éléments suivants : 
-
 -   une analyse de votre algorithme de force brute ; 
 -   un diagramme, un organigramme ou un pseudocode décrivant le processus de réflexion qui sous-tend la solution optimisée ;
 -   l'algorithme choisi pour la version optimisée, et les limites de l'algorithme (cas limites) ; 
 -   une comparaison de l'efficacité et des performances de l'algorithme de force brute par rapport à l'algorithme optimisé en utilisant la notation Big-O, la complexité temporelle et l'analyse de la mémoire.
-- 
+
+##
+
 Partie 3: backtesting et optimisation
 -   Préparer un jeu de diapositives contenant une comparaison côte à côte entre les résultats de votre algorithme et les choix de Sienna  
 - Créer un rapport d'exploration de l'ensemble des données. Présentation.
+
+##
 
 > Livrables attendus 🔭  
 ##   
@@ -77,9 +83,6 @@ Partie 3: backtesting et optimisation
     -   une comparaison côte à côte entre la sortie de votre algorithme et les choix de Sienna, via un rapport d'exploration de l'ensemble des données.
 
 </br>
-
-> note
-##
 
 > Structure de dossiers du projet  
 ##
