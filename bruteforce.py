@@ -1,4 +1,5 @@
-﻿import itertools
+﻿import time
+import itertools
 import csv
 
 def read_data(file_path):
@@ -52,6 +53,8 @@ def main():
     Cette fonction est le point d'entrée du programme. Elle lit les données, trouve la meilleure combinaison d'actions 
     et affiche les résultats.
     """
+    #Mesure du temps avec time 
+    start_time = time.time()
     shares = read_data("Actions1.csv") # lire les données
     max_cost = 500 # définir le coût maximal
     best_combination, best_profit = brute_force(shares, max_cost) # trouver la meilleure combinaison d'actions
@@ -59,6 +62,9 @@ def main():
     # imprimer la meilleure combinaison et le meilleur profit
     print(f"Best combination: {best_combination}")
     print(f"Best profit: {best_profit:.2f} euros")
+
+    end_time = time.time()  # On arrête de mesurer le temps
+    print(f"Execution time: {end_time - start_time:.2f} seconds")  # On imprime le temps d'exécution
 
 if __name__ == "__main__":
     # exécuter la fonction principale si le script est exécuté en tant que programme principal

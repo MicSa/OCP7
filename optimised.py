@@ -1,4 +1,5 @@
-﻿import csv
+﻿import time
+import csv
 
 def read_data(file_path):
     """
@@ -54,12 +55,17 @@ def main():
     """
     C'est la fonction principale. Elle lit les données, appelle la fonction Knapsack et affiche les résultats.
     """
+    #On commence à mesure le temps que ça prend
+    start_time = time.time()
     shares = read_data("Actions1.csv")
     max_cost = 500
     best_combination, best_profit = knapsack(shares, max_cost)
     
     print(f"Best combination: {best_combination}")
     print(f"Best profit: {best_profit:.2f} euros")
+    # On arrête la mesure du temps et on regarde la différence
+    end_time = time.time()  # On arrête de mesurer le temps
+    print(f"Execution time: {end_time - start_time:.2f} seconds")  # On imprime le temps d'exécution
 
 if __name__ == "__main__":
     main()
