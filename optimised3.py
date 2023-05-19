@@ -1,5 +1,4 @@
-﻿# Modification pour prise en charge des centimes d'euros
-#Commenter un bloc de texte en python : 
+﻿# Backtesting sur le fichier de données de Sienna
 """ l'algorithme du sac à dos est un exemple de problème de programmation dynamique qui ne peut pas être résolu 
 avec des valeurs continues (c'est-à-dire des nombres à virgule flottante).
 Pour résoudre ce problème, on va multiplier toutes les valeurs de coût par 100 pour convertir les centimes en euros.
@@ -11,20 +10,31 @@ Une fois les données transformées, on va utiliser la même fonction `knapsack`
 import time
 import csv
 
-def read_data(file_path):
+def read_sienna_data(file_path):
     """
-    Cette fonction lit les données du fichier csv.
+    Cette fonction lit les données de trading de Sienna à partir du fichier csv.
     :param file_path: Le chemin vers le fichier csv.
-    :return: Une liste de tuples représentant les actions.
+    :return: Une liste de tuples représentant les transactions de Sienna.
     Chaque tuple contient le nom de l'action, son coût et son profit.
     """
     with open(file_path, 'r') as file:
         data = list(csv.reader(file))
-    shares = []
+    transactions = []
     for row in data[1:]:
-        # Multiply the share cost by 100 to convert it to cents.
-        shares.append((row[0], int(float(row[1]) * 100), float(row[2].strip('%')) / 100))
-    return shares
+        transactions.append((row[0], int(float(row[1]) * 100), float(row[2].strip('%')) / 100))
+    return transactions
+
+def calculate_profit(transactions):
+    """
+    Cette fonction calcule le profit total à partir d'une liste de transactions.
+    :param transactions: Une liste de tuples représentant les transactions.
+    Chaque tuple contient le nom de l'action, son coût et son profit.
+    :return: Le profit total.
+    """
+    total_profit = 0
+    for name, cost, profit in transactions:
+        total_profit += cost * profit
+    return total_profit
 
 
 
@@ -64,20 +74,24 @@ def knapsack(shares, max_cost):
             j -= share_cost
         i -= 1
 
+
     return best_combination, best_profit
 
 def main():
     """
-    C'est la fonction principale. Elle lit les données, appelle la fonction Knapsack et imprime les résultats.
+    Il s'agit de la fonction principale. Elle lit les données, appelle la fonction Knapsack, 
+    lit les transactions de Sienna, calcule les profits et imprime les résultats.
     """
-    shares = read_data("dataset1_Python+P7.csv")
-    max_cost = 500 * 100  # Conversion du max en centimes.
-    best_combination, best_profit = knapsack(shares, max_cost)
+    shares = read_sienna_data("dataset1_Python+P7.csv")
+    max_cost = 500 * 100
+    best_combination, _ = knapsack(shares, max_cost)
+    sienna_transactions = read_sienna_data("solution2_Python+P7.txt")
+
+    algorithm_profit = calculate_profit(best_combination)
+    sienna_profit = calculate_profit(sienna_transactions)
     
-    # En affichant la meilleure combinaison, on convertit en euros les coûts et les profits.
-    best_combination = [(name, cost / 100, profit) for name, cost, profit in best_combination]
-    print(f"Best combination: {best_combination}")
-    print(f"Best profit: {best_profit / 100:.2f} euros")  # Cette ligne est dans la fonction main pour ne pas avoir best_profit undefined
+    print(f"Profit de l'algorithme : {algorithm_profit / 100:.2f} euros")
+    print(f"Profit de Sienna : {sienna_profit / 100:.2f} euros")
 
 if __name__ == "__main__":
     main()
