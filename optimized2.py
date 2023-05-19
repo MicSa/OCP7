@@ -77,11 +77,9 @@ def knapsack(liste_actions):
 
         total_actions -= 1
 
-    return meilleur_combinaison, ks[-1][-1] / 100
     while max_inv >= 0 and total_actions >= 0:
         if ks[total_actions][max_inv] == \
             ks[total_actions-1][max_inv - cout[total_actions-1]] + profit[total_actions-1]:
-                                #1]] + profit[total_actions-1]:
             # Si l'action est incluse dans la solution optimale, l'ajouter à la liste
             meilleur_combinaison.append(liste_actions[total_actions-1])
             # Soustraire le coût de l'action du montant total
@@ -90,6 +88,7 @@ def knapsack(liste_actions):
         total_actions -= 1
     # Retourne la meilleure combinaison d'actions et le profit total
     return meilleur_combinaison, ks[-1][-1] / 100
+
 
 
 def afficher_resultats(meilleur_combinaison, meilleur_profit):

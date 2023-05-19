@@ -50,7 +50,6 @@ def knapsack(shares, max_cost):
         i -= 1
 
     return best_combination, best_profit
-
 def main():
     """
     C'est la fonction principale. Elle lit les données, appelle la fonction Knapsack et affiche les résultats.
