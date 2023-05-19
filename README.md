@@ -93,6 +93,7 @@ Partie 3: backtesting et optimisation
 ├── Partie 2
 │   ├── optimised.py
 └── Partie 3
+    ├── Optimized2.py
     ├── Rapport et présentation
     ├── Datasets en CSV pour backtesting
 
@@ -145,3 +146,6 @@ $ pip install -r requirements.txt
 
 $ python3 bruteforce.py
 $ python3 optimized.py
+$ python3 optimized2.py
+  - choisir dataset1 ou dataset2
+  - les résultats s'affichent à l'écran
