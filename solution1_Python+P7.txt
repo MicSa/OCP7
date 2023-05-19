@@ -1,6 +1,1 @@
-Sienna bought:
-
-Share-GRUT
-
-Total cost: 498.76€
-Total return: 196.61€
+Share-GRUT,498.76,196.61

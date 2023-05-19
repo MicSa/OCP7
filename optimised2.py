@@ -1,5 +1,4 @@
 ﻿# Modification pour prise en charge des centimes d'euros
-#Commenter un bloc de texte en python : 
 """ l'algorithme du sac à dos est un exemple de problème de programmation dynamique qui ne peut pas être résolu 
 avec des valeurs continues (c'est-à-dire des nombres à virgule flottante).
 Pour résoudre ce problème, on va multiplier toutes les valeurs de coût par 100 pour convertir les centimes en euros.
