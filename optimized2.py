@@ -87,7 +87,7 @@ def knapsack(liste_actions):
         # Passe à l'action précédente
         total_actions -= 1
     # Retourne la meilleure combinaison d'actions et le profit total
-    return meilleur_combinaison, ks[-1][-1] / 100
+    return meilleur_combinaison, ks[-1][-1] 
 
 
 
