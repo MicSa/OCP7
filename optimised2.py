@@ -22,9 +22,10 @@ def read_data(file_path):
         data = list(csv.reader(file))
     shares = []
     for row in data[1:]:
-        # Multiply the cost by 100 and round to the nearest integer.
-        shares.append((row[0], round(float(row[1]) * 100), float(row[2]) / 100))
+        # Multiply the share cost by 100 to convert it to cents.
+        shares.append((row[0], int(float(row[1]) * 100), float(row[2].strip('%')) / 100))
     return shares
+
 
 
 
@@ -42,12 +43,13 @@ def knapsack(shares, max_cost):
     # Remplissage du tableau de programmation dynamique.
     for i in range(1, num_shares + 1):
         share_name, share_cost, share_profit = shares[i - 1]
-        for j in range(max_cost + 1):
-            if j < share_cost:
-                dp[i][j] = dp[i - 1][j]
-            else:
-                # Choix du profit maximum entre ne pas acheter l'action actuelle et l'acheter.
-                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - share_cost] + share_cost * share_profit)
+    for j in range(max_cost + 1):
+        if j < share_cost:
+            dp[i][j] = dp[i - 1][j]
+        else:
+            # Use int(share_cost) instead of share_cost.
+            dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - int(share_cost)] + share_cost * share_profit)
+
 
     # Le profit maximum se trouve dans le coin inférieur droit du tableau.
     best_profit = dp[-1][-1]
@@ -80,29 +82,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# def main():
-#     """
-#     C'est la fonction principale. Elle lit les données, appelle la fonction Knapsack et affiche les résultats.
-#     """
-#     #On commence à mesure le temps que ça prend
-#     start_time = time.time()
-#     shares = read_data("dataset.csv")
-#     max_cost = 500 * 100  # Conversion du max en centimes.
-    
-#     # On appelle la fonction knapsack
-#     # On récupère la meilleure combinaison et le meilleur profit
-#     # On imprime les résultats
-#     # On conertit cost en euros
-    
-#     best_combination = [(name, cost / 100, profit) for name, cost, profit in best_combination]
-    
-#     # On imprime les résultats
-#     print(f"Best combination: {best_combination}")
-#     print(f"Best profit: {best_profit / 100:.2f} euros")
-    
-#     # On arrête la mesure du temps et on regarde la différence
-#     end_time = time.time()  # On arrête de mesurer le temps
-#     print(f"Execution time: {end_time - start_time:.2f} seconds")  # On imprime le temps d'exécution
-
-# if __name__ == "__main__":
-#     main()
