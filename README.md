@@ -134,7 +134,7 @@ $ git clone https://github.com/MicSa/OCP7/
 <h3>Activer l'environnement virtuel </h3>
 
 $ cd OCP7
-$ python3 -m venv venvOCP4 
+$ python3 -m venv venvOCP7 
 $ source env/bin/activate
 
 <h3>Installer les paquets requis </h3>
@@ -143,4 +143,5 @@ $ pip install -r requirements.txt
 
 <h3>Lancer le programme </h3>
 
-$ python3 main.py
+$ python3 bruteforce.py
+$ python3 optimized.py
